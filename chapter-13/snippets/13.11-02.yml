@@ -1,0 +1,16 @@
+# Modern .NET, Chapter 13, Section 13.11
+services:
+  shop-a:
+    image: shopservice:1.0.0
+    environment: { Shop__Name: "Shop (replica A)" }
+    healthcheck:
+      test: ["CMD", "dotnet", "--version"]       # chiseled images have no curl; use a TCP/HTTP check from the orchestrator in real use
+      interval: 5s
+  shop-b:
+    image: shopservice:1.0.0
+    environment: { Shop__Name: "Shop (replica B)" }
+  lb:
+    image: nginx:stable
+    ports: ["8080:80"]
+    volumes: ["./nginx.conf:/etc/nginx/conf.d/default.conf:ro"]
+    depends_on: [shop-a, shop-b]

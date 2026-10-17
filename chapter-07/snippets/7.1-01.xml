@@ -1,0 +1,5 @@
+<!-- Modern .NET, Chapter 7, Section 7.1 -->
+<PropertyGroup>
+  <!-- SYSLIB diagnostics report APIs obsoleted by the runtime -->
+  <WarningsAsErrors>$(WarningsAsErrors);SYSLIB0011;SYSLIB0014;SYSLIB0021;SYSLIB0023;SYSLIB0032</WarningsAsErrors>
+</PropertyGroup>

@@ -1,0 +1,4 @@
+<!-- Modern .NET, Chapter 3, Section 3.5 -->
+<ItemGroup>
+  <PackageReference Include="Newtonsoft.Json" />
+</ItemGroup>

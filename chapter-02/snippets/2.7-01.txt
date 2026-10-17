@@ -1,0 +1,15 @@
+ROLLBACK RUNBOOK (example)
+
+Trigger conditions:
+  - Error rate above 2% for 10 minutes, or
+  - p95 latency more than 50% above baseline for 15 minutes, or
+  - Any data corruption report
+
+Steps:
+  1. Route 100% of traffic back to the legacy pool (load balancer change).
+  2. Confirm legacy health checks are passing.
+  3. Disable new-version background jobs to prevent duplicate processing.
+  4. Capture logs and metrics from the new version for analysis.
+  5. Notify stakeholders; open an incident review.
+
+Verified by: dry run on staging, date: ____   Owner: ____

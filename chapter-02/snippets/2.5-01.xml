@@ -1,0 +1,5 @@
+<!-- Modern .NET, Chapter 2, Section 2.5 -->
+<PropertyGroup>
+  <AnalysisLevel>latest-recommended</AnalysisLevel>
+  <EnableNETAnalyzers>true</EnableNETAnalyzers>
+</PropertyGroup>

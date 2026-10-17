@@ -1,0 +1,11 @@
+{
+  "Pricing": {
+    "TaxRate": 0.08,
+    "FreeShippingThreshold": 100,
+    "Currency": "USD"
+  },
+  "Smtp": {
+    "Host": "localhost",
+    "Port": 25
+  }
+}

@@ -1,0 +1,9 @@
+@* Modern .NET, Chapter 8, Section 8.4 *@
+@model ShopMvc.Controllers.Product
+<h1>New product</h1>
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="All"></div>
+    <label asp-for="Name"></label> <input asp-for="Name" /> <span asp-validation-for="Name"></span><br />
+    <label asp-for="Price"></label> <input asp-for="Price" /> <span asp-validation-for="Price"></span><br />
+    <button>Save</button>
+</form>

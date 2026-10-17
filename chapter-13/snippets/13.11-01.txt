@@ -1,0 +1,10 @@
+RELEASE PROCEDURE (manual)
+
+1. Build in Release mode on the build server (BUILD01) using Visual Studio.
+2. Zip the output folder; rename it with today's date.
+3. Remote into WEB02, stop the app pool, back up the old folder, unzip the new one.
+4. Copy over web.config from the backup (do NOT overwrite with the new one).
+5. Start the app pool; browse to the site; click around for a few minutes.
+6. Repeat 3-5 for WEB03.
+7. If something is wrong: restore the folder from backup and pray.
+Time: 3 hours. Done by: whoever knows the procedure.

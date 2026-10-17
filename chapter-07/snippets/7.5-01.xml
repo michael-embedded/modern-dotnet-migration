@@ -1,0 +1,5 @@
+<!-- Modern .NET, Chapter 7, Section 7.5 -->
+<carriers>
+  <add name="FastShip" apiUrl="https://fast.example.com" timeoutSeconds="15" />
+  <add name="SlowBoat" apiUrl="https://slow.example.com" timeoutSeconds="60" />
+</carriers>

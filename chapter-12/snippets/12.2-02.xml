@@ -1,0 +1,6 @@
+<!-- Modern .NET, Chapter 12, Section 12.2 -->
+<PropertyGroup>
+  <ServerGarbageCollector>true</ServerGarbageCollector>
+  <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+  <TieredPGO>true</TieredPGO>
+</PropertyGroup>

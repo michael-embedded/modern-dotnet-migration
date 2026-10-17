@@ -1,0 +1,7 @@
+1. Define the goal      ("p95 latency of /search under 150 ms at 200 rps")
+2. Measure the baseline (realistic load, realistic data)
+3. Profile              (find where time and allocations actually go)
+4. Form a hypothesis    ("the string splitting in ParseRow allocates 80% of garbage")
+5. Change one thing
+6. Re-measure           (keep it only if the data says it helped)
+7. Stop when the goal is met

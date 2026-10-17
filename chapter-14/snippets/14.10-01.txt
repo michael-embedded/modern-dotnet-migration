@@ -1,0 +1,24 @@
+CUTOVER PLAN: <route group or system>
+
+Preconditions (all must be true):
+  [ ] Replay diff: 0 unexplained mismatches over the last 7 days
+  [ ] Performance comparison within agreed thresholds
+  [ ] Rollback rehearsed on staging within the last 14 days
+  [ ] Partners notified; allow-lists updated; certificates valid for > 90 days
+  [ ] On-call engineer and business owner named and available for the window
+
+Rollout:
+  Day 0:  5% for 24h    -> proceed if error rate <= baseline +0.2 pts and p95 <= baseline +10%
+  Day 2:  25% for 48h   -> same thresholds, plus business metrics within 2% of legacy
+  Day 5:  50% for 48h
+  Day 7:  100%; legacy kept warm for 14 days
+
+Automatic rollback triggers:
+  - Error rate > 2% for 5 minutes
+  - p95 latency > 150% of baseline for 10 minutes
+  - Any data-integrity alert
+
+Rollback procedure: route 100% to legacy via proxy config <link>; verify legacy health;
+  pause new-version background jobs; capture logs/traces; open incident review.
+
+Decision owner: <name>   Sign-off: <business owner>   Date: ____

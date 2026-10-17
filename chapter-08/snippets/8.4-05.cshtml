@@ -1,0 +1,5 @@
+@* Modern .NET, Chapter 8, Section 8.4 *@
+@model ShopMvc.Controllers.Product
+<h1>@Model.Name</h1>
+<p>@Model.Price.ToString("C")</p>
+<a asp-action="Index">Back</a>

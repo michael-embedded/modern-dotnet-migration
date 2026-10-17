@@ -1,0 +1,6 @@
+<!-- Modern .NET, Chapter 13, Section 13.2 -->
+<PropertyGroup>
+  <ContainerRepository>shopservice</ContainerRepository>
+  <ContainerImageTags>1.0.0;latest</ContainerImageTags>
+  <ContainerFamily>noble-chiseled</ContainerFamily>   <!-- tiny Ubuntu "chiseled" image: no shell, minimal attack surface -->
+</PropertyGroup>

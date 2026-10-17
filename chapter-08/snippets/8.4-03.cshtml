@@ -1,0 +1,11 @@
+@* Modern .NET, Chapter 8, Section 8.4 *@
+@model IReadOnlyList<ShopMvc.Controllers.Product>
+<h1>Products</h1>
+<form method="get"><input name="q" value="@ViewData["Query"]" /> <button>Search</button></form>
+<ul>
+@foreach (var p in Model)
+{
+    <li><a asp-action="Details" asp-route-id="@p.Id">@p.Name</a> — @p.Price.ToString("C")</li>
+}
+</ul>
+<a asp-action="Create">Add product</a>

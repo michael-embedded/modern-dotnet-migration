@@ -1,0 +1,6 @@
+<!-- Modern .NET, Chapter 13, Section 13.3 -->
+<PropertyGroup>
+  <PublishReadyToRun>true</PublishReadyToRun>
+  <InvariantGlobalization>true</InvariantGlobalization>   <!-- drops the ICU library; ONLY if you do not need culture data -->
+  <TieredPGO>true</TieredPGO>
+</PropertyGroup>

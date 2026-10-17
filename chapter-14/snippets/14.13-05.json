@@ -1,0 +1,21 @@
+{
+  "Urls": "http://localhost:5000",
+  "ReverseProxy": {
+    "Routes": {
+      "migrated-quote": {
+        "ClusterId": "modern",
+        "Order": 1,
+        "Match": { "Path": "/api/quote" }
+      },
+      "everything-else": {
+        "ClusterId": "legacy",
+        "Order": 100,
+        "Match": { "Path": "{**catch-all}" }
+      }
+    },
+    "Clusters": {
+      "legacy": { "Destinations": { "d1": { "Address": "http://localhost:5001/" } } },
+      "modern": { "Destinations": { "d1": { "Address": "http://localhost:5002/" } } }
+    }
+  }
+}

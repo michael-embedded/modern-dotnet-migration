@@ -1,0 +1,16 @@
+# Modern .NET, Chapter 13, Section 13.4
+services:
+  shop:
+    image: shopservice:1.0.0
+    ports:
+      - "8080:8080"
+    environment:
+      Shop__Name: "Compose Shop"
+      ASPNETCORE_ENVIRONMENT: Production
+    secrets:
+      - source: shop_db_password
+        target: Shop__DbPassword
+
+secrets:
+  shop_db_password:
+    file: ./secrets/db_password.txt

@@ -1,0 +1,9 @@
+{
+  "Carriers": [
+    { "Name": "FastShip", "ApiUrl": "https://fast.example.com", "TimeoutSeconds": 15 },
+    { "Name": "SlowBoat", "ApiUrl": "https://slow.example.com", "TimeoutSeconds": 60 }
+  ],
+  "ConnectionStrings": {
+    "Shop": "Data Source=shop.db"
+  }
+}

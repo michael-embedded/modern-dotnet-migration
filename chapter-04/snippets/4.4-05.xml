@@ -1,0 +1,4 @@
+<!-- Modern .NET, Chapter 4, Section 4.4 -->
+<ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+  <PackageReference Include="PolySharp" Version="1.15.0" PrivateAssets="all" />
+</ItemGroup>

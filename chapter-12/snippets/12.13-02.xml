@@ -1,0 +1,2 @@
+<!-- Modern .NET, Chapter 12, Section 12.13 -->
+<TargetFrameworks>net8.0;net10.0</TargetFrameworks>
